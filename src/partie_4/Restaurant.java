@@ -1,42 +1,35 @@
 package partie_4;
 
-
-
-
-
 import java.util.ArrayList;
 
 public class Restaurant {
 
-        Cafetiere cafetiere;
+    Cafetiere cafetiere;
     double profit;
-    ArrayList<    Client> listeClientServi;
+    ArrayList<Client> listeClientServi;
 
     String nom;
 
-    Restaurant()
-    {
+    Restaurant() {
         listeClientServi = new ArrayList<>();
         this.nom = " Chinois renoi ";
     }
 
 
-    public Restaurant(String nom)
-    {
+    public Restaurant(String nom) {
 
         this.nom = nom;
         this.cafetiere = new Cafetiere();
         listeClientServi = new ArrayList<>();
     }
 
-    public Boolean servir(Client client)
-    {
+    public Boolean servir(Client client) {
         if (client.commandeCafe != null && client.commandeCafe.typeCafe != TypeCafe.BATARD) {
             double cout = 0;
             if (client.tasse == null) {
                 if (client.commandeCafe.quantiteLiquideMl <= 100) {
                     cout += 2;
-                    client.tasse = new     Tasse();
+                    client.tasse = new Tasse();
                 } else {
                     cout += 3;
                     client.tasse = new Tasse(500);

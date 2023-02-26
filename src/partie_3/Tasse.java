@@ -3,7 +3,6 @@ package partie_3;
 
 
 public class Tasse {
-    // quantité de liquide max ds une tasse
     double quantiteCafeMax;
     Cafe cafe;
 
@@ -56,6 +55,4 @@ public class Tasse {
         }
 
     }
-
-
 }

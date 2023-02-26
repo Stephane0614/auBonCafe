@@ -1,30 +1,24 @@
 package partie_4;
 
-
-
 public class Cafe {
 
     private int quantiteCafe;
     private int tailleCafe;
-    private  boolean haveTasse;
+    private boolean haveTasse;
     private String choixCafe;
-    public  TypeCafe typeCafe;
+    public TypeCafe typeCafe;
     public double quantiteLiquideMl;
 
-    Cafe()
-    {
-        this.typeCafe =  TypeCafe.MOKA;
+    Cafe() {
+        this.typeCafe = TypeCafe.MOKA;
         this.quantiteLiquideMl = 100;
     }
 
+    Cafe(TypeCafe typecafe, double quantite) {
 
-    Cafe(TypeCafe typecafe, double quantite)
-    {
-
-        this.typeCafe  =  typecafe;
+        this.typeCafe = typecafe;
         this.quantiteLiquideMl = quantite;
     }
-
 
 
     public Cafe(String choixCafe, boolean haveTasse, int tailleCafe, int quantiteCafe) {

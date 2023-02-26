@@ -4,15 +4,15 @@ import javax.swing.*;
 
 public class MainPart1 {
     public static void main(String[] args) {
-        boolean reussite = true ;
+        boolean reussite = true;
 
-        Cafetiere cafetiere = new Cafetiere() ;
+        Cafetiere cafetiere = new Cafetiere();
 
-        Tasse tasseDefault = new Tasse() ;
-        Tasse tasseBut = new Tasse() ;
-        Tasse tasseAvecValeurs = new Tasse() ;
-        Tasse tasseAvecValeurNegative = new Tasse() ;
-        Tasse tasseVide = new Tasse() ;
+        Tasse tasseDefault = new Tasse();
+        Tasse tasseBut = new Tasse();
+        Tasse tasseAvecValeurs = new Tasse();
+        Tasse tasseAvecValeurNegative = new Tasse();
+        Tasse tasseVide = new Tasse();
 
         cafetiere.remplirTasse(tasseDefault);
         cafetiere.remplirTasse(tasseBut);
@@ -20,13 +20,13 @@ public class MainPart1 {
         cafetiere.remplirTasse(tasseAvecValeurNegative, TypeCafe.JAVA, 200.2);
 
         tasseBut.boire();
-        tasseAvecValeurs.boire(100.2) ;
+        tasseAvecValeurs.boire(100.2);
         tasseAvecValeurNegative.boire(300.2);
 
 
-        String presentationTypeCafe = "" ;
+        String presentationTypeCafe = "";
 
-        for(TypeCafe type : TypeCafe.values())
+        for (TypeCafe type : TypeCafe.values())
             presentationTypeCafe += type.name() + "\n";
 
         int check1 = JOptionPane.showConfirmDialog(null, "Vous avez actuellement tout ces types de cafe \n" + presentationTypeCafe
@@ -36,7 +36,7 @@ public class MainPart1 {
                 + "TYPICA\r\n"
                 + "BOURBON\r\n"
                 + "BATARD\r\n\n"
-                + "C'est réussi ? ") ;
+                + "C'est réussi ? ");
 
         int check2 = JOptionPane.showConfirmDialog(null,
                 "Cette tasse devrait contenir 100.0 ml de café MOKA \n"
@@ -52,17 +52,17 @@ public class MainPart1 {
                         + "Ma tasse contient " + tasseBut.cafe.quantiteLiquideMl + " ml de café " + tasseBut.cafe.typeCafe + "\n\n"
 
                         + "C'est réussi ? "
-        ) ;
+        );
 
         try {
             tasseVide.boire();
             System.err.println("Nop, quelque chose ne fonctionne pas !");
-            reussite = false ;
+            reussite = false;
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Le programme plante quand je tente de boire dans une tasse vide. Ce n'est pas un bug, c'est une feature ;");
         }
 
-        if(check1 == 0 && check2 == 0 && reussite)
+        if (check1 == 0 && check2 == 0 && reussite)
             JOptionPane.showMessageDialog(null, "Bravo tu as réussi cet exo ! C'était simple non ?");
         else
             JOptionPane.showMessageDialog(null, "Quelque chose ne fonctionne pas :/ Dommage ! N'hésite pas à demander si tu as besoin d'aide ! ");

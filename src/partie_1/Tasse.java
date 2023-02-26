@@ -6,27 +6,24 @@ public class Tasse {
     double quantiteCafeMax;
     Cafe cafe;
 
-    Tasse(){
+    Tasse() {
         this.quantiteCafeMax = 100;
     }
 
-    Tasse(float quantiteCafeMax){
+    Tasse(float quantiteCafeMax) {
         this.quantiteCafeMax = quantiteCafeMax;
 
     }
 
-    public double boire(double quantiteBu)
-    {
-        cafe.quantiteLiquideMl -= quantiteBu ;
-        return cafe.quantiteLiquideMl ;
+    public double boire(double quantiteBu) {
+        cafe.quantiteLiquideMl -= quantiteBu;
+        return cafe.quantiteLiquideMl;
 
     }
 
-    public void boire()
-    {
-        cafe.quantiteLiquideMl  = 0;
+    public void boire() {
+        cafe.quantiteLiquideMl = 0;
     }
-
 
 
 }

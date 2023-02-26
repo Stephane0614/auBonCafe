@@ -17,27 +17,16 @@ public class MainPart3 {
 
         ArrayList<Client> listeClientExpulse = new ArrayList<Client>();
 
-        Restaurant[] listeResto = new Restaurant[3] ;
-        listeResto[0] = resto1 ;
-        listeResto[1] = resto2 ;
-        listeResto[2] = resto3 ;
+        Restaurant[] listeResto = new Restaurant[3];
+        listeResto[0] = resto1;
+        listeResto[1] = resto2;
+        listeResto[2] = resto3;
 
 
-        Methode.serviceListe(listeClient1,listeResto,listeClientExpulse);
-        Methode.serviceListe(listeClient2,listeResto,listeClientExpulse);
-        Methode.serviceListe(listeClient3,listeResto,listeClientExpulse);
+        Methode.serviceListe(listeClient1, listeResto, listeClientExpulse);
+        Methode.serviceListe(listeClient2, listeResto, listeClientExpulse);
+        Methode.serviceListe(listeClient3, listeResto, listeClientExpulse);
 
-        Methode.viewRestaurantInfo(listeResto,listeClientExpulse );
-
-
-//        System.out.println("");
-//        System.out.println(resto1.nom);
-//        System.out.println(resto2.nom);
-//        System.out.println(resto3.nom);
-
-//        Methode.ViewDataList(listeClient2);
-//        Methode.ViewDataList(listeClient3);
-
-
+        Methode.viewRestaurantInfo(listeResto, listeClientExpulse);
     }
 }

@@ -1,7 +1,5 @@
 package partie_3;
 
-
-
 import java.util.ArrayList;
 
 public class Restaurant {
@@ -12,23 +10,20 @@ public class Restaurant {
 
     String nom;
 
-    Restaurant()
-    {
+    Restaurant() {
         listeClientServi = new ArrayList<>();
         this.nom = "le restaurant";
     }
 
 
-    public Restaurant(String nom)
-    {
+    public Restaurant(String nom) {
 
         this.nom = nom;
         this.cafetiere = new Cafetiere();
         listeClientServi = new ArrayList<>();
     }
 
-    public Boolean servir(Client client)
-    {
+    public Boolean servir(Client client) {
         if (client.commandeCafe != null && client.commandeCafe.typeCafe != TypeCafe.BATARD) {
             double cout = 0;
             if (client.tasse == null) {
@@ -51,8 +46,6 @@ public class Restaurant {
 
         System.out.println("Expulse le client " + client.nom + " du restaurant ! ");
         return false;
-
     }
-
 }
 

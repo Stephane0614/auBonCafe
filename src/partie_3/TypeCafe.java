@@ -13,6 +13,4 @@ public enum TypeCafe {
     TypeCafe(double cout) {
         this.coutParMl = cout;
     }
-
-
 }

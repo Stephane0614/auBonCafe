@@ -10,23 +10,20 @@ public class Restaurant {
 
     String nom;
 
-    Restaurant()
-    {
+    Restaurant() {
         listeClientServi = new ArrayList<>();
         this.nom = "le restaurant";
     }
 
 
-    public Restaurant(String nom)
-    {
+    public Restaurant(String nom) {
 
         this.nom = nom;
         this.cafetiere = new Cafetiere();
         listeClientServi = new ArrayList<>();
     }
 
-    public double servir(Client client)
-    {
+    public double servir(Client client) {
         if (client.commandeCafe != null && client.commandeCafe.typeCafe != TypeCafe.BATARD) {
             double cout = 0;
             if (client.tasse == null) {
